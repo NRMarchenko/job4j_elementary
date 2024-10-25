@@ -58,4 +58,17 @@ public class FindLoopTest {
         int expected = -1;
         assertThat(result).isEqualTo(expected);
     }
+
+    @Test
+    public void whenDiapasonHas5Then5() {
+        /* Дописать тест, когда элемент 8 в диапазоне не найден.
+        Можно искать любой другой элемент, корректно отражая этот факт в названии теста. */
+        int[] data = new int[] {5, 2, 3, 2, 4, 5, 6, 7, 8};
+        int element = 5;
+        int start = 2;
+        int finish = 6;
+        int result = FindLoop.indexInRange(data, element, start, finish);
+        int expected = 5;
+        assertThat(result).isEqualTo(expected);
+    }
 }
